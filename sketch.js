@@ -1,8 +1,8 @@
-// V0.2
+// V0.3
 
 let BREITE = 400;
 let HOEHE = 400;
-let GROESSE = 15;
+const GROESSE = 15;
 
 function setup() {
   BREITE = windowWidth;
