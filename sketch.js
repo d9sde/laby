@@ -14,14 +14,14 @@ function setup() {
 
 function draw() {
   background(220);
-  for(a = 1; a < BREITE; a+=GROESSE)
+  for(x = 1; x < BREITE; x += GROESSE)
     {
-      for(b = 1; b < HOEHE; b+=GROESSE)
+      for(y = 1; y < HOEHE; y += GROESSE)
         {
           if(random([0,1]))
-            line(a, b, GROESSE+a, GROESSE+b);     // Zeichne einen \
+            line(x, y, x + GROESSE, y + GROESSE);     // Zeichne einen \
           else
-            line(GROESSE+a, b, a, GROESSE+b);     // Zeichne einen /
+            line(x + GROESSE, y, x, y + GROESSE);     // Zeichne einen /
         }
     }
   noLoop();
