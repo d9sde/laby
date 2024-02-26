@@ -5,16 +5,8 @@ Laby
 ## Description
 
 Simple random maze art written in p5.js
+Live demo at https://p5.d9s.de/laby
 
-## Authors
+## Author
 
 d9sde (https://d9s.de/)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
