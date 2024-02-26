@@ -1,7 +1,6 @@
-// V0.3
+// V0.4
 
-let BREITE = 400;
-let HOEHE = 400;
+let BREITE, HOEHE;
 const GROESSE = 15;
 
 function setup() {
@@ -10,7 +9,7 @@ function setup() {
   createCanvas(BREITE, HOEHE);
   
   strokeWeight(2);
-  stroke(200);
+  stroke(100);                    // Strichfarbe
 }
 
 function draw() {
@@ -20,31 +19,29 @@ function draw() {
       for(b = 1; b < HOEHE; b+=GROESSE)
         {
           if(random([0,1]))
-            line(a, b, GROESSE+a, GROESSE+b);
+            line(a, b, GROESSE+a, GROESSE+b);     // Zeichne einen \
           else
-            line(GROESSE+a, b, a, GROESSE+b);
+            line(GROESSE+a, b, a, GROESSE+b);     // Zeichne einen /
         }
     }
   noLoop();
 }
 
-function windowResized() {
+function windowResized() {        // wenn die Browserfenstergröße verändert wurde
 
   BREITE = windowWidth;
   HOEHE = windowHeight; 
 
-  background(220);
   resizeCanvas(windowWidth, windowHeight);
   loop();
 }
 
-function mouseClicked() {
+function mouseClicked() {         // Bei Mausklick neu zeichnen
   loop();
 }
 
-function keyPressed() {
-	console.log("got: key " + key + " keyCode " + keyCode);
-	if ( key === 'f' ) {  // f === 70
+function keyPressed() {           // per f in Fullscreen shalten
+	if ( key === 'f' ) { 
 		let fs = fullscreen();
 		fullscreen(!fs);
 	}
