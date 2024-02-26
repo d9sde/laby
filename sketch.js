@@ -7,7 +7,6 @@ function setup() {
   BREITE = windowWidth;
   HOEHE = windowHeight;
   createCanvas(BREITE, HOEHE);
-  
   strokeWeight(2);
   stroke(100);                    // Strichfarbe
 }
@@ -27,11 +26,9 @@ function draw() {
   noLoop();
 }
 
-function windowResized() {        // wenn die Browserfenstergröße verändert wurde
-
+function windowResized() {        // wenn die Browserfenstergröße verändert wurde, neu zeichnen
   BREITE = windowWidth;
   HOEHE = windowHeight; 
-
   resizeCanvas(windowWidth, windowHeight);
   loop();
 }
@@ -40,7 +37,7 @@ function mouseClicked() {         // Bei Mausklick neu zeichnen
   loop();
 }
 
-function keyPressed() {           // per f in Fullscreen shalten
+function keyPressed() {           // per f in Fullscreen schalten
 	if ( key === 'f' ) { 
 		let fs = fullscreen();
 		fullscreen(!fs);
