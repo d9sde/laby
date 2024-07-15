@@ -47,7 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Just showing how a few lines p5.js can create sophisticated patterns.
+Just showing how a few lines p5.js can create sophisticated patterns. Can be used for education, decoration or just for fun.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
