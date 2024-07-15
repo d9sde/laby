@@ -1,43 +1,44 @@
-// V0.4
+// Danny Schreiter 2024 // www.d9s.de
+// V1.0
 
-let BREITE, HOEHE;
-const GROESSE = 15;
+let total_width, total_height;
+const SIZE = 15;
 
 function setup() {
-  BREITE = windowWidth;
-  HOEHE = windowHeight;
-  createCanvas(BREITE, HOEHE);
+  total_width = windowWidth;
+  total_height = windowHeight;
+  createCanvas(total_width, total_height);
   strokeWeight(2);
-  stroke(100);                    // Strichfarbe
+  stroke(100);                    // color of the lines
 }
 
 function draw() {
   background(220);
-  for(x = 1; x < BREITE; x += GROESSE)
+  for(x = 1; x < total_width; x += SIZE)
     {
-      for(y = 1; y < HOEHE; y += GROESSE)
+      for(y = 1; y < total_height; y += SIZE)
         {
           if(random([0,1]))
-            line(x, y, x + GROESSE, y + GROESSE);     // Zeichne einen \
+            line(x, y, x + SIZE, y + SIZE);     // draw a \
           else
-            line(x + GROESSE, y, x, y + GROESSE);     // Zeichne einen /
+            line(x + SIZE, y, x, y + SIZE);     // draw a /
         }
     }
-  noLoop();
+  noLoop();                       // wait until mouse action or resize
 }
 
-function windowResized() {        // wenn die Browserfenstergröße verändert wurde, neu zeichnen
-  BREITE = windowWidth;
-  HOEHE = windowHeight; 
+function windowResized() { 
+  total_width = windowWidth;
+  total_height = windowHeight; 
   resizeCanvas(windowWidth, windowHeight);
   loop();
 }
 
-function mouseClicked() {         // Bei Mausklick neu zeichnen
+function mouseClicked() {         // redraw on mouse click
   loop();
 }
 
-function keyPressed() {           // per f in Fullscreen schalten
+function keyPressed() {           // use 'f' key to toggle full screen mode
 	if ( key === 'f' ) { 
 		let fs = fullscreen();
 		fullscreen(!fs);
