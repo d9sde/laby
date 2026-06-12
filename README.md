@@ -34,7 +34,7 @@
 <h3 align="center">Laby</h3>
 
   <p align="center">
-    Simple random maze art written in <a href="https://p5js.org/">p5.js</a>. See live demo at https://p5.d9s.de/laby
+    Simple random maze art written in <a href="https://p5js.org/">p5.js</a>. See live demo at [https://p5.d9s.de/laby](https://d9sde.github.io/laby/)
     <br />
   </p>
 </div>
